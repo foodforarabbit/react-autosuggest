@@ -354,6 +354,15 @@ export default class Autosuggest extends Component {
 
   onDocumentMouseUp = () => {
     const { focusInputOnSuggestionClick } = this.props;
+
+    // eslint-disable-next-line
+    console.error('onDocumentMouseUp', {
+      focusInputOnSuggestionClick,
+      props: this.props,
+      me: this,
+      pressedSuggestion: this.pressedSuggestion,
+      justSelectedSuggestion: this.justSelectedSuggestion
+    });
     if (this.pressedSuggestion && !this.justSelectedSuggestion) {
       if (focusInputOnSuggestionClick) {
         this.input.focus();

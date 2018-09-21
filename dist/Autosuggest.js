@@ -820,6 +820,15 @@ var _initialiseProps = function _initialiseProps() {
   this.onDocumentMouseUp = function() {
     var focusInputOnSuggestionClick = _this4.props.focusInputOnSuggestionClick;
 
+    // eslint-disable-next-line
+
+    console.error('onDocumentMouseUp', {
+      focusInputOnSuggestionClick: focusInputOnSuggestionClick,
+      props: _this4.props,
+      me: _this4,
+      pressedSuggestion: _this4.pressedSuggestion,
+      justSelectedSuggestion: _this4.justSelectedSuggestion
+    });
     if (_this4.pressedSuggestion && !_this4.justSelectedSuggestion) {
       if (focusInputOnSuggestionClick) {
         _this4.input.focus();
